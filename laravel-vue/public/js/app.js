@@ -15543,22 +15543,49 @@ return /******/ (function(modules) { // webpackBootstrap
 ;
 //# sourceMappingURL=axios.map
 
-<script type="text/javascript">
-    var urlUsers = 'https://jsonplaceholder.typicode.com/users';
-    new Vue({
-        el: '#main',
-        created: function() {
-            this.getUsers();
+new Vue({
+    el: '#crud',
+
+    data: {
+        companies: [],
+        newNombre: '',
+        newIngreso: 0,
+        newContacto: '',
+        newTelefono: '',
+        newComent: '',
+        errors: []
+    },
+    methods: {
+        getCompanies: function() {
+            var url = 'company';
+            axios.get(url).then(response => {
+                this.companies = response.data
+            });
         },
-        data: {
-            lists: []
-        },
-        methods: {
-            getUsers: function() {
-                axios.get(urlUsers).then(response => {
-                    this.lists = response.data
-	    });
-            }
+
+        createCompany: function() {
+            var url = 'company';
+            axios.post(url, {
+                nombre: this.newNombre,
+                ingresos: this.newIngresos,
+                contacto: this.newContacto,
+                telefono: this.newTelefono,
+                fecha: new Date(),
+                coment: this.newComent,
+                gestion: 0
+
+            }).then(response => {
+                this.newNombre = '';
+                this.newIngresos = '';
+                this.newContacto = '';
+                this.newTelefono = '';
+                this.newComent = '';
+                this.errors = [];
+                $('#create').modal('hide');
+                toastr.success('Nueva empresa creada con éxito');
+            }).catch(error => {
+                this.errors = 'Corrija el error'
+            });
         }
-    });
-</script>
+    }
+});
