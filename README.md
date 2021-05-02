@@ -16,3 +16,5 @@ Para ver la vista del formulario de empresas hay que ir a la ruta localhost/reso
 
 Para ver la vista del gestor de empresas hay que ir a la ruta localhost/resources/gestor.blade.php
 
+con el comando: 'php artisan migrate:refresh' en el repositorio he migrado la estructura de la base de datos "companies" a mi BBDD MySQL local.
+
