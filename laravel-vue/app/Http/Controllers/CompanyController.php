@@ -14,7 +14,10 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $company = Company::get();
+        $companies = Company::orderBy('id', 'DESC')->paginate();
+        return view('companies.index',compact('companies'));
+
+        /*$company = Company::get();
 
         return $company;
     }
@@ -50,16 +53,7 @@ class CompanyController extends Controller
         return;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+   
 
     /**
      * Show the form for editing the specified resource.

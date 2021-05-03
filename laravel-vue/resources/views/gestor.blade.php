@@ -17,6 +17,8 @@
                 </div>
             </div>
         </div>
+
+        <a href="{{ route('companies.index') }}">
    
         <div class="col-md-12 mb-3"> 
             <table id="table_gestor" class="table table-hover table-bordered">
@@ -31,15 +33,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!--<tr v-for="company in companies">
-	                    <td width="10px">@{{ company.id }}</td>
-	                    <td>@{{ company.nombre }}</td>
+                    @foreach($companies as $company)
+                        <tr>
+                            <td>[{$company->id}]</td>
+                        
+                        
+                        </tr>
+                    @endforeach
+                    <!--<tr v-for="$company in $companies">
+	                    <td width="10px">@{{ $company.id }}</td>
+	                    <td>@{{ $company.nombre }}</td>
                         <td>@{{ company.ingresos }}</td>
                         <td>@{{ company.contacto }} + @{{ company.telefono }}</td>
                         <td>@{{ company.fecha }}</td>
                         <td>@{{ company.gestionado }}</td>
                     </tr>-->
-                    <tr>
+                    <!--<tr>
                         <th scope="row">1</th>
                         <td>Empresa 1</td>
                         <td>1000€</td>
@@ -54,11 +63,11 @@
                         <td>Pedro (65547879)</td>
                         <td>6 de marzo a las 10:30</td>
                         <td>NO</td>
-                    </tr>
+                    </tr>-->
                 
-            </tbody>
-        </table>
-      </div>
+                </tbody>
+            </table>
+        </div>
 
     <!--<script src="{{ asset('js/app.js') }}"></script>-->
     </body>

@@ -13,8 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/form', function () {
     return view('form');
 });
 
-Route::resource('company','CompanyController');
+Route::get('/gestor', function () {
+    return view('gestor');
+});
+
+//Route::resource('/companies','CompanyController');
+Route::resource('company','CompanyController', ['except' => 'show']);
