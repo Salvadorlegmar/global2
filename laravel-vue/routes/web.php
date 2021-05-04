@@ -21,5 +21,6 @@ Route::get('/gestor', function () {
     return view('gestor');
 });
 
-//Route::resource('/companies','CompanyController');
-Route::resource('company','CompanyController', ['except' => 'show']);
+//Route::get('/gestor', 'CompanyController@index');
+//Route::resource('company','CompanyController');
+Route::resource('companies','CompanyController', ['except' => 'show']);

@@ -15,13 +15,13 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre',70);
-            $table->integer('ingresos');
-            $table->string('contacto',70);
-            $table->string('telefono',10);
-            $table->date('fecha_consulta');
-            $table->string('comentarios',170);
-            $table->boolean('gestionado');
+            $table->string('name',70);
+            $table->integer('money');
+            $table->string('contact',70);
+            $table->string('telephone',10);
+            $table->string('coment',170);
+            $table->boolean('is_gestioned');
+            $table->timestamps();
         });
     }
 

@@ -14,12 +14,12 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::orderBy('id', 'DESC')->paginate();
-        return view('companies.index',compact('companies'));
+        /*$companies = Company::orderBy('id', 'DESC')->paginate();
+        return view('companies.index',compact('companies'));*/
 
-        /*$company = Company::get();
+        $companies = Company::get();
 
-        return $company;
+        return $companies;
     }
 
     /**
@@ -29,6 +29,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
+       
         //
     }
 

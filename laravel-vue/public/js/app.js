@@ -15545,25 +15545,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 new Vue({
     el: '#crud',
+    created: function(){
+        this.getCompanies();
+    },
 
     data: {
-        companies: [],
-        newNombre: '',
-        newIngreso: 0,
-        newContacto: '',
-        newTelefono: '',
-        newComent: '',
-        errors: []
+        companies: []
     },
     methods: {
         getCompanies: function() {
-            var url = 'company';
+            var url = 'companies';
             axios.get(url).then(response => {
                 this.companies = response.data
             });
         },
 
-        createCompany: function() {
+        /*createCompany: function() {
             var url = 'company';
             axios.post(url, {
                 nombre: this.newNombre,
@@ -15586,6 +15583,6 @@ new Vue({
             }).catch(error => {
                 this.errors = 'Corrija el error'
             });
-        }
+        }*/
     }
 });
