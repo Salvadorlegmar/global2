@@ -20,7 +20,6 @@
         </div>
 
         <!--/*<a href="{{ route('companies.index') }}">*/-->
-   
         <div class="col-md-12 mb-3"> 
             <table id="table_gestor" class="table table-hover table-bordered">
                 <thead>
@@ -36,14 +35,22 @@
                 <tbody>
                    
                     <tr v-for="company in companies">
-                        <th scope="row">1</th>
+                        <td>@{{ company.id }}</td>
+                        <td>@{{ company.name }}</td>
+                        <td>@{{ company.money }}</td>
+                        <td>@{{ company.contact }}(@{{ company.telephone }}) </td>
+                        <td>@{{ company.created_at }}</td>
+                        <td>@{{ company.is_gestioned }}</td>
+                    <tr>
+
+                        <!--<th scope="row">1</th>
                         <td>Empresa 1</td>
                         <td>1000€</td>
                         <td>Pedro (65547879)</td>
                         <td>6 de marzo a las 11:30</td>
                         <td>SI</td>
                         
-                    </tr>
+                    </tr>-->
                     <!--<tr>
                         <th scope="row">1</th>
                         <td>Empresa 1</td>
@@ -64,13 +71,13 @@
                 </tbody>
             </table>
         </div>
+        <script src="{{ asset('js/app.js') }}"></script>
         <!--<div class="col-sm-5"> 
             <pre>
                 @{{ $data }}
             </pre>
         </div>-->
 
-    <!--<script src="{{ asset('js/app.js') }}"></script>-->
 
       </div>
     </body>

@@ -21,7 +21,9 @@ class CompaniesTableSeeder extends Seeder
               'contact' => 'Pedro',
               'telephone' => '65547879',
               'coment' => 'Empresa 1',
-              'is_gestioned' => '0'
+              'is_gestioned' => '0',
+              'created_at' => DB::raw('now()'),
+              'updated_at' => DB::raw('now()')
           ]);
           DB::table('companies')->insert([	            
             'name' => 'Empresa 2',
@@ -29,7 +31,9 @@ class CompaniesTableSeeder extends Seeder
             'contact' => 'Pedro',
             'telephone' => '65547879',
             'coment' => 'Empresa 2',
-            'is_gestioned' => '1'
+            'is_gestioned' => '1',
+            'created_at' => DB::raw('now()'),
+            'updated_at' => DB::raw('now()')
           ]);
            
           DB::table('companies')->insert([	            
@@ -38,7 +42,9 @@ class CompaniesTableSeeder extends Seeder
             'contact' => 'Pedro',
             'telephone' => '65547879',
             'coment' => 'Empresa 2',
-            'is_gestioned' => '1'
+            'is_gestioned' => '1',
+            'created_at' => DB::raw('now()'),
+            'updated_at' => DB::raw('now()')
           ]);
           DB::table('companies')->insert([	            
             'name' => 'Empresa 4',
@@ -46,7 +52,9 @@ class CompaniesTableSeeder extends Seeder
             'contact' => 'Pedro',
             'telephone' => '65547879',
             'coment' => 'Empresa 4',
-            'is_gestioned' => '0'
+            'is_gestioned' => '0',
+            'created_at' => DB::raw('now()'),
+            'updated_at' => DB::raw('now()')
           ]);
         
 
