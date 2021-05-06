@@ -6,7 +6,13 @@ new Vue({
     },
 
     data: {
-        companies: []
+        companies: [],
+        newName: '',
+        newMoney: '',
+        newContact: '',
+        newTelephone: '',
+        newComent: '',
+        errors: []
     },
     methods: {
         getCompanies: function() {
@@ -16,29 +22,26 @@ new Vue({
             });
         },
 
-        /*createCompany: function() {
-            var url = 'company';
+        createCompany: function() {
+            var url = 'companies';
             axios.post(url, {
-                nombre: this.newNombre,
-                ingresos: this.newIngresos,
-                contacto: this.newContacto,
-                telefono: this.newTelefono,
-                fecha: new Date(),
+                name: this.newName,
+                money: this.newMoney,
+                contact: this.newContact,
+                telephone: this.newTelephone,
                 coment: this.newComent,
-                gestion: 0
 
             }).then(response => {
-                this.newNombre = '';
-                this.newIngresos = '';
-                this.newContacto = '';
-                this.newTelefono = '';
+                this.newName = '';
+                this.newMoney = '';
+                this.newContact = '';
+                this.newTelephone = '';
                 this.newComent = '';
                 this.errors = [];
-                $('#create').modal('hide');
                 toastr.success('Nueva empresa creada con éxito');
             }).catch(error => {
-                this.errors = 'Corrija el error'
+                this.errors = error.response.data
             });
-        }*/
+        }
     }
 });

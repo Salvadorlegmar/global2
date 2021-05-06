@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Formulario Empresa</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
     <div id="crud" class="row">
@@ -17,20 +17,20 @@
                 <!--<div class="row">-->
                     <div class="col-md-6 mb-3">
                         <label for="nombre">¿Como se llama tu empresa?</label>
-                        <input class="form-control" id="nombre" placeholder="Empresa 5" type="text" name="nombre" v-model="newNombre"/>
+                        <input class="form-control" id="nombre" placeholder="Empresa 5" type="text" name="nombre" v-model="newName"/>
                     </div>
                 <!--</div>-->
                 <div class="col-md-6 mb-3">
                     <label for="email">¿Cuales son tus ingresos anuales?</label>
-                    <input class="form-control"  id="email" type="text" placeholder="15.000" name="ingresos" v-model="newIngresos"/>
+                    <input class="form-control"  id="email" type="text" placeholder="15.000" name="ingresos" v-model="newMoney"/>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="email">¿Como te llamas tú?</label>
-                    <input class="form-control"  id="email" type="text" placeholder="Pedro" name="namePersona" v-model="newContacto"/>
+                    <input class="form-control"  id="email" type="text" placeholder="Pedro" name="namePersona" v-model="newContact"/>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="email">Teléfono de contacto</label>
-                    <input class="form-control"  id="email" type="text" placeholder="666565" name="telefono" v-model="newTelefono"/>
+                    <input class="form-control"  id="email" type="text" placeholder="666565" name="telefono" v-model="newTelephone"/>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="email">¿Qué te interesa de nosotros?</label>
@@ -48,6 +48,6 @@
         </div>
     </div>
 
-    <!--<script src="{{ asset('js/app.js') }}"></script>-->
+    <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

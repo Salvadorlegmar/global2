@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Gestor</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <!--<link rel="stylesheet" href="../sass/gestor.css">-->
     
   
@@ -41,43 +42,11 @@
                         <td>@{{ company.contact }}(@{{ company.telephone }}) </td>
                         <td>@{{ company.created_at }}</td>
                         <td>@{{ company.is_gestioned }}</td>
-                    <tr>
-
-                        <!--<th scope="row">1</th>
-                        <td>Empresa 1</td>
-                        <td>1000€</td>
-                        <td>Pedro (65547879)</td>
-                        <td>6 de marzo a las 11:30</td>
-                        <td>SI</td>
-                        
-                    </tr>-->
-                    <!--<tr>
-                        <th scope="row">1</th>
-                        <td>Empresa 1</td>
-                        <td>1000€</td>
-                        <td>Pedro (65547879)</td>
-                        <td>6 de marzo a las 11:30</td>
-                        <td>SI</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Empresa 2</td>
-                        <td>1000€</td>
-                        <td>Pedro (65547879)</td>
-                        <td>6 de marzo a las 10:30</td>
-                        <td>NO</td>
-                    </tr>-->
-                
+                    <tr>                
                 </tbody>
             </table>
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
-        <!--<div class="col-sm-5"> 
-            <pre>
-                @{{ $data }}
-            </pre>
-        </div>-->
-
 
       </div>
     </body>

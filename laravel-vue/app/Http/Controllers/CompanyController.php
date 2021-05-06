@@ -42,13 +42,11 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'nombre' => 'required',
-            'ingresos' => 'required',
-            'contacto' => 'required',
-            'telefono' => 'required',
-            'fecha_consulta' => 'required',
-            'comentarios' => 'required',
-            'gestionado' => 'required'
+            'name' => 'required',
+            'money' => 'required',
+            'contact' => 'required',
+            'telephone' => 'required',
+            'coment' => 'required',
         ]);
         Company::create($request->all());
         return;
