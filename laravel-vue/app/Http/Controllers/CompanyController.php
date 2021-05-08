@@ -41,12 +41,13 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $this->validate($request,[
             'name' => 'required',
             'money' => 'required',
             'contact' => 'required',
             'telephone' => 'required',
             'coment' => 'required',
+            'is_gestioned' => 'required',
         ]);
         Company::create($request->all());
         return;
@@ -91,4 +92,17 @@ class CompanyController extends Controller
 
         $company->delete();
     }
+
+    /**
+     * Ganerate a PDF file with the new company register 
+     */
+    public function imprimir(){
+        //$name=$request->input('name');
+        //$name=$request->url();
+        $company = Company::get()->last();
+
+        $pdf = \PDF::loadView('pdf', compact('company'));
+        return $pdf->download('Company.pdf');
+   }
+
 }

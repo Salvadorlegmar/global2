@@ -16,24 +16,24 @@
             <form class="needs-validation" method="POST" v-on:submit.prevent="createCompany">
                 <!--<div class="row">-->
                     <div class="col-md-6 mb-3">
-                        <label for="nombre">¿Como se llama tu empresa?</label>
+                        <label for="name">¿Como se llama tu empresa?</label>
                         <input class="form-control" id="nombre" placeholder="Empresa 5" type="text" name="nombre" v-model="newName"/>
                     </div>
                 <!--</div>-->
                 <div class="col-md-6 mb-3">
-                    <label for="email">¿Cuales son tus ingresos anuales?</label>
+                    <label for="money">¿Cuales son tus ingresos anuales?</label>
                     <input class="form-control"  id="email" type="text" placeholder="15.000" name="ingresos" v-model="newMoney"/>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="email">¿Como te llamas tú?</label>
+                    <label for="contact">¿Como te llamas tú?</label>
                     <input class="form-control"  id="email" type="text" placeholder="Pedro" name="namePersona" v-model="newContact"/>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="email">Teléfono de contacto</label>
+                    <label for="telephone">Teléfono de contacto</label>
                     <input class="form-control"  id="email" type="text" placeholder="666565" name="telefono" v-model="newTelephone"/>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="email">¿Qué te interesa de nosotros?</label>
+                    <label for="coment">¿Qué te interesa de nosotros?</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Me interesan vuestros productos" rows="3" v-model="newComent"></textarea>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -42,7 +42,9 @@
                     </label>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button id="send" type="submit" class="btn btn-primary">
+                        <a href="{{ route('print') }}"> Enviar </a>
+                    </button>
                 </div>
             </form>
         </div>

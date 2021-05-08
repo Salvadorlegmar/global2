@@ -21,6 +21,6 @@ Route::get('/gestor', function () {
     return view('gestor');
 });
 
-//Route::get('/gestor', 'CompanyController@index');
-//Route::resource('company','CompanyController');
+Route::name('print')->get('/imprimir', 'CompanyController@imprimir');
+//Route::get('imprimer-pdf', )
 Route::resource('companies','CompanyController', ['except' => 'show']);
