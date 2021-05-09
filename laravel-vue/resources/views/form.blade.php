@@ -46,13 +46,6 @@
                     <button onclick="imprimir();" type="submit" class="btn btn-primary"> 
                         Enviar
                     </button>
-                    <!--<script>
-                        function imprimir() {
-                            setTimeout(function(){
-                                window.open('{{ route('print') }}');
-                            }, 2000);
-                        };
-                    </script>-->
                 </div>
             </form>
         </div>

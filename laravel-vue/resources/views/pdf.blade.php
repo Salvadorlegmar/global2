@@ -8,19 +8,8 @@
                 text-align: center;
                 text-transform: uppercase;
             }
-            .contenido{
-                font-size: 20px;
-            }
-            #primero{
-                background-color: #ccc;
-            }
-            #segundo{
-                color:#44a359;
-            }
-            #tercero{
-                text-decoration:line-through;
-            }
-    </style>
+            
+        </style>
     </head>
     <body>
         <h1>LA EMPRESA {{$company ->name}}</h1>
@@ -31,7 +20,7 @@
         </br>
         <h2>El registro se ha realizado: {{$company->created_at}}</h2>
         </br>
-        <h2>Le agradecemos sum comentario: {{$company->coment}}</h2>
+        <h2>Le agradecemos su comentario: {{$company->coment}}</h2>
         </br>
 
 
