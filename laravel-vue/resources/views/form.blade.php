@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
+    <script src="https://www.google.com/recaptcha/api.js?" async defer></script>
     <div id="crud" class="row">
         <div class="col-md-8 order-md-1">
             <div class="col-md-7 mb-3">
@@ -42,14 +43,28 @@
                     </label>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <button id="send" type="submit" class="btn btn-primary">
-                        <a href="{{ route('print') }}"> Enviar </a>
+                    <button onclick="imprimir();" type="submit" class="btn btn-primary"> 
+                        Enviar
                     </button>
+                    <!--<script>
+                        function imprimir() {
+                            setTimeout(function(){
+                                window.open('{{ route('print') }}');
+                            }, 2000);
+                        };
+                    </script>-->
                 </div>
             </form>
         </div>
     </div>
 
+    <script>
+        function imprimir() {
+            setTimeout(function(){
+                window.open('{{ route('print') }}');
+            }, 2000);
+        };
+    </script>
     <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

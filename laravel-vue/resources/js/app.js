@@ -24,12 +24,12 @@ new Vue({
 
         createCompany: function() {
             var url = 'companies';
-            console.log("VAMOS");
+            /*console.log("VAMOS");
             console.log(this.newName);
             console.log(this.newMoney);
             console.log(this.newContact);
             console.log(this.newTelephone);
-            console.log(this.newComent);
+            console.log(this.newComent);*/
             axios.post(url, {
                 name: this.newName,
                 money: this.newMoney,

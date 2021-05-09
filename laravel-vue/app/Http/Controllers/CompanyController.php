@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MessageReceived;
 use App\Company;
 
 class CompanyController extends Controller
@@ -21,6 +23,7 @@ class CompanyController extends Controller
 
         return $companies;
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -50,6 +53,8 @@ class CompanyController extends Controller
             'is_gestioned' => 'required',
         ]);
         Company::create($request->all());
+        Mail::to('sallegmar@gmail.com')->send(new MessageReceived);
+
         return;
     }
 
@@ -93,16 +98,17 @@ class CompanyController extends Controller
         $company->delete();
     }
 
+
     /**
      * Ganerate a PDF file with the new company register 
      */
     public function imprimir(){
-        //$name=$request->input('name');
-        //$name=$request->url();
+
         $company = Company::get()->last();
 
         $pdf = \PDF::loadView('pdf', compact('company'));
         return $pdf->download('Company.pdf');
-   }
+    }
 
+    
 }

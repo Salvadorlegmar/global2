@@ -27,7 +27,7 @@
         <hr>
         <h2>El propiestario es {{$company->contact}} con número de telefono {{$company->telephone}}</h2>
         </br>
-        <h2>La empresa tiene como ingresos: {{$company->money}} €</h2>
+        <h2>La empresa tiene como ingresos anuales: {{$company->money}} €</h2>
         </br>
         <h2>El registro se ha realizado: {{$company->created_at}}</h2>
         </br>

@@ -6,11 +6,11 @@
         <title>Gestor</title>
         <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">-->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <!--<link rel="stylesheet" href="../sass/gestor.css">-->
     
   
     </head>
     <body>
+      <script src="https://www.google.com/recaptcha/api.js?" async defer></script>
       <div id="crud">  
         <div class="col-md-6 mb-3">
             <div class="input-group">
@@ -36,6 +36,7 @@
                 <tbody>
                    
                     <tr v-for="company in companies">
+                        
                         <td>@{{ company.id }}</td>
                         <td>@{{ company.name }}</td>
                         <td>@{{ company.money }}</td>
@@ -46,8 +47,8 @@
                 </tbody>
             </table>
         </div>
-        <script src="{{ asset('js/app.js') }}"></script>
 
       </div>
+      <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
